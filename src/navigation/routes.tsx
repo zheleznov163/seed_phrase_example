@@ -8,6 +8,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 export default () => (
   <Stack.Navigator screenOptions={options.default}>
     <Stack.Screen component={Screens.Preview} name="Preview" />
+    <Stack.Screen component={Screens.GenerateSeed} name="GenerateSeed" />
   </Stack.Navigator>
 );
 
