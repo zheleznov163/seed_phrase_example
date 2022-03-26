@@ -1,3 +1,4 @@
+export {default as COLOR} from './colors';
 
 export function sliceIntoChunks<T>(arr: T[], size: number) {
   const res = [];
