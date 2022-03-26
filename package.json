@@ -15,8 +15,11 @@
     "mobx": "^6.5.0",
     "mobx-react-lite": "^3.3.0",
     "react": "17.0.2",
+    "react-native": "0.67.4",
+    "react-native-gesture-handler": "^2.3.2",
     "react-native-svg": "^12.3.0",
     "react-native-svg-transformer": "^1.0.0",
+    "react-native-touch-id": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
