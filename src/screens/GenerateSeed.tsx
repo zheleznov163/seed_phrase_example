@@ -5,12 +5,13 @@ import {COLOR, hexAlpha} from '../utils';
 import {Icon, Button, Phrase, ModalFingerprint} from '../components';
 import {StackScreenProps} from '@react-navigation/stack';
 import {RootStackParamList} from '../navigation/types';
-import {useBiometric, useModal} from '../hooks';
+import {useBiometric, useModal, useSeedPhrase} from '../hooks';
 
 export type Props = StackScreenProps<RootStackParamList, 'GenerateSeed'>;
 
 export default observer<Props>(({navigation}) => {
   const biometric = useBiometric();
+  const phrase = useSeedPhrase();
   const [modal, open, close] = useModal();
 
   const [isHidden, setHidden] = useState(!biometric.access);
@@ -64,7 +65,7 @@ export default observer<Props>(({navigation}) => {
           </View>
 
           <ScrollView style={styles.scrollview} contentContainerStyle={styles.scrollviewContainer}>
-            <Phrase hidden={isHidden} value={MOCK_WORD} />
+            <Phrase hidden={isHidden} value={phrase} />
           </ScrollView>
 
           <View style={styles.footer}>
@@ -114,7 +115,6 @@ const styles = StyleSheet.create({
   rotate: {
     transform: [{rotate: '180deg'}],
   },
-
   marginRight: {
     marginLeft: 13,
   },
@@ -133,10 +133,13 @@ const styles = StyleSheet.create({
   // ----- ScrollView -------
   scrollview: {
     flex: 1,
-    marginTop: 31,
+    marginTop: 16,
     marginBottom: 16,
   },
-  scrollviewContainer: {},
+  scrollviewContainer: {
+    paddingTop: 15,
+    paddingBottom: 16,
+  },
 
   // -------- Main --------
   header: {
@@ -183,28 +186,3 @@ const styles = StyleSheet.create({
     lineHeight: 18,
   },
 });
-
-const MOCK_WORD = [
-  '1',
-  '2',
-  '3',
-  '4',
-  '5',
-  '6',
-  '7',
-  '8',
-  '9',
-  '10',
-  '11',
-  '12',
-  '13',
-  '14',
-  '15',
-  '16',
-  '17',
-  '18',
-  '19',
-  '20',
-  '21',
-  '22',
-];
