@@ -12,19 +12,27 @@ export type Props = StackScreenProps<RootStackParamList, 'GenerateSeed'>;
 export default observer<Props>(({navigation}) => {
   const biometric = useBiometric();
   const phrase = useSeedPhrase();
+
   const [modal, open, close] = useModal();
 
   const [isHidden, setHidden] = useState(!biometric.access);
   useEffect(() => setHidden(!biometric.access), [biometric.access]);
 
   const onError = (error: any) => console.log('error', error);
+  const checkAccess = async () => {
+    if (await biometric.check()) {
+      biometric.authenticate().then(close).catch(onError);
+      open();
+    } else {
+      open();
+    }
+  };
+
   const togglePhrase = useCallback(
-    () =>
-      // !biometric.access
-      //   ? biometric.check().catch(onError)
-      //   : //
-      setHidden(value => !value),
-    [biometric],
+    async () =>
+      !biometric.access && (await biometric.check()) ? checkAccess() : setHidden(value => !value),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [biometric.access],
   );
 
   const goBack = useCallback(() => navigation.goBack(), [navigation]);
@@ -82,6 +90,7 @@ export default observer<Props>(({navigation}) => {
             <View style={styles.footerRight}>
               <Button
                 onPress={open}
+                disable={!biometric.access}
                 IconRight={<Icon name="arrow_r" size={10} />}>
                 Continue
               </Button>
@@ -103,6 +112,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLOR.Dark3,
     flexGrow: 1,
+    paddingVertical: 16,
   },
   icon: {
     marginRight: 18,
