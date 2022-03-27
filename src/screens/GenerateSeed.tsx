@@ -36,7 +36,7 @@ export default observer<Props>(({navigation}) => {
   );
 
   const goBack = useCallback(() => navigation.goBack(), [navigation]);
-  //
+
   return (
     <>
       <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
@@ -98,6 +98,7 @@ export default observer<Props>(({navigation}) => {
           </View>
         </View>
       </SafeAreaView>
+
       <Modal transparent={true} visible={modal} onRequestClose={close}>
         <View style={styles.overlay}>
           <ModalFingerprint onCancel={close} />
@@ -148,7 +149,7 @@ const styles = StyleSheet.create({
   },
   scrollviewContainer: {
     paddingTop: 15,
-    paddingBottom: 16,
+    paddingBottom: 6,
   },
 
   // -------- Main --------

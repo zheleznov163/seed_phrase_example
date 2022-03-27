@@ -35,8 +35,6 @@ export function getRandomValues(values: Uint8Array) {
     randomBytes.byteOffset,
     values.length,
   );
-
-  console.log('randomValues', randomValues);
   // Copy the data into the given TypedArray, letting the VM optimize the copy if possible
   values.set(randomValues);
   return values;
