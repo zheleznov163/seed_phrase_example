@@ -1,7 +1,7 @@
 import React, {memo} from 'react';
 import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
-import Word from './Word';
-import {sliceIntoChunks} from '../utils';
+import Word from '../atoms/Word';
+import {sliceIntoChunks} from '../../utils';
 
 type Props = {
   value: string[];

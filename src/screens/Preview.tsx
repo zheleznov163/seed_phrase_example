@@ -1,7 +1,7 @@
 import React, {useCallback} from 'react';
 import {Image, Platform, SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
 import {COLOR} from '../utils';
-import {Icon, Button} from '../components';
+import {Icon, Button} from '../components/atoms';
 import {StackScreenProps} from '@react-navigation/stack';
 import {RootStackParamList} from '../navigation/types';
 

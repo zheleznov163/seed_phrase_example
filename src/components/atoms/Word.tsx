@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
-import {COLOR, hexAlpha} from '../utils';
+import {COLOR, hexAlpha} from '../../utils';
 
 type Props = {
   text?: string;

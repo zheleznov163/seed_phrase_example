@@ -1,7 +1,7 @@
 import React from 'react';
 import {SvgCss, XmlProps} from 'react-native-svg';
-import {COLOR} from '../utils';
-import {icons} from '../assets';
+import {COLOR} from '../../utils';
+import {icons} from '../../assets';
 
 type Props = Omit<XmlProps, 'xml'> & {
   fill?: COLOR;

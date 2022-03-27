@@ -8,7 +8,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import {COLOR} from '../utils';
+import {COLOR} from '../../utils';
 
 type Props = {
   children?: string;

@@ -1,8 +1,7 @@
 import React from 'react';
 import {StyleProp, StyleSheet, Text, View, ViewStyle} from 'react-native';
-import Icon from './Icon';
-import Button from './Button';
-import {COLOR} from '../utils';
+import {Button, Icon} from '../atoms';
+import {COLOR} from '../../utils';
 
 type Props = {
   children?: string;
