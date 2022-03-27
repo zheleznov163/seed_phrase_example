@@ -1,22 +1,20 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {observer} from 'mobx-react-lite';
-import {SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View} from 'react-native';
-import {COLOR} from '../utils';
-import {Icon, Button, Phrase} from '../components';
+import {Modal, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View} from 'react-native';
+import {COLOR, hexAlpha} from '../utils';
+import {Icon, Button, Phrase, ModalFingerprint} from '../components';
 import {StackScreenProps} from '@react-navigation/stack';
 import {RootStackParamList} from '../navigation/types';
-import {useBiometric} from '../hooks';
+import {useBiometric, useModal} from '../hooks';
 
 export type Props = StackScreenProps<RootStackParamList, 'GenerateSeed'>;
 
 export default observer<Props>(({navigation}) => {
   const biometric = useBiometric();
+  const [modal, open, close] = useModal();
 
   const [isHidden, setHidden] = useState(!biometric.access);
   useEffect(() => setHidden(!biometric.access), [biometric.access]);
-
-  const [modal, setModal] = useState(false);
-  const done = useCallback(() => setModal(true), []);
 
   const onError = (error: any) => console.log('error', error);
   const togglePhrase = useCallback(
@@ -82,8 +80,7 @@ export default observer<Props>(({navigation}) => {
 
             <View style={styles.footerRight}>
               <Button
-                onPress={done}
-                disable={biometric.access}
+                onPress={open}
                 IconRight={<Icon name="arrow_r" size={10} />}>
                 Continue
               </Button>
@@ -91,6 +88,11 @@ export default observer<Props>(({navigation}) => {
           </View>
         </View>
       </SafeAreaView>
+      <Modal transparent={true} visible={modal} onRequestClose={close}>
+        <View style={styles.overlay}>
+          <ModalFingerprint onCancel={close} />
+        </View>
+      </Modal>
     </>
   );
 });
@@ -155,6 +157,13 @@ const styles = StyleSheet.create({
   },
   footerLeft: {flex: 2, marginRight: 16},
   footerRight: {flex: 3},
+
+  overlay: {
+    paddingHorizontal: 27,
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: hexAlpha(COLOR.Dark2, 60),
+  },
   // ------ Text -------
   title: {
     color: COLOR.White,
