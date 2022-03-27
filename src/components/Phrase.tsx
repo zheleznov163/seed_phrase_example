@@ -13,8 +13,8 @@ export default memo(({value, style, hidden = true}: Props) => (
   <View style={style}>
     {sliceIntoChunks(value, 2).map(([first, second], index) => (
       <View key={first + second + index} style={styles.container}>
-        <Word hidden={hidden} index={index * 2} text={first} style={styles.word} />
-        <Word hidden={hidden} index={index * 2 + 1} text={second} />
+        <Word hidden={hidden} index={index * 2 + 1} text={first} style={styles.word} />
+        <Word hidden={hidden} index={index * 2 + 2} text={second} />
       </View>
     ))}
   </View>
