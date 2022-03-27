@@ -1,4 +1,4 @@
-import React, {useMemo} from 'react';
+import React, {memo} from 'react';
 import {StyleProp, StyleSheet, View, ViewStyle} from 'react-native';
 import Word from './Word';
 import {sliceIntoChunks} from '../utils';
@@ -9,20 +9,16 @@ type Props = {
   style?: StyleProp<ViewStyle>;
 };
 
-export default ({value, style, hidden = true}: Props) => {
-  const words = useMemo(() => sliceIntoChunks(value, 2), [value]);
-
-  return (
-    <View style={style}>
-      {words.map(([first, second], index) => (
-        <View key={first + second} style={styles.container}>
-          <Word hidden={hidden} index={index * 2} text={first} style={styles.word} />
-          <Word hidden={hidden} index={index * 2 + 1} text={second} />
-        </View>
-      ))}
-    </View>
-  );
-};
+export default memo(({value, style, hidden = true}: Props) => (
+  <View style={style}>
+    {sliceIntoChunks(value, 2).map(([first, second], index) => (
+      <View key={first + second + index} style={styles.container}>
+        <Word hidden={hidden} index={index * 2} text={first} style={styles.word} />
+        <Word hidden={hidden} index={index * 2 + 1} text={second} />
+      </View>
+    ))}
+  </View>
+));
 
 const styles = StyleSheet.create({
   container: {

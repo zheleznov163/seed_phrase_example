@@ -1,6 +1,13 @@
 import React from 'react';
-import {StyleProp, StyleSheet, Text, TextStyle, View, ViewStyle} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {
+  StyleProp,
+  StyleSheet,
+  Text,
+  TextStyle,
+  TouchableOpacity,
+  View,
+  ViewStyle,
+} from 'react-native';
 import {COLOR} from '../utils';
 
 type Props = {
@@ -29,7 +36,7 @@ export default function Button({
   style,
 }: Props) {
   return (
-    <TouchableOpacity onPress={disable ? undefined : onPress}>
+    <TouchableOpacity disabled={disable} onPress={onPress}>
       <View style={[styles.size, styles[mode].container, style, disable && styles.disable]}>
         {IconLeft && IconLeft}
         <Text style={[styles[mode].text, textStyle]}>{children || label}</Text>
@@ -82,6 +89,8 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'space-between',
     },
-    text: {},
+    text: {
+      color: COLOR.Dark3,
+    },
   }),
 };

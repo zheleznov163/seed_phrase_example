@@ -1,5 +1,4 @@
 import React, {useCallback} from 'react';
-import {observer} from 'mobx-react-lite';
 import {Image, Platform, SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
 import {COLOR} from '../utils';
 import {Icon, Button} from '../components';
@@ -10,7 +9,7 @@ export type Props = StackScreenProps<RootStackParamList, 'Preview'>;
 
 const statusBarHeight = Platform.OS === 'ios' ? 50 : StatusBar.currentHeight;
 
-export default observer<Props>(({navigation}) => {
+export default ({navigation}: Props) => {
   const navtoGenerateSeed = useCallback(() => navigation.push('GenerateSeed'), [navigation]);
   return (
     <>
@@ -37,7 +36,7 @@ export default observer<Props>(({navigation}) => {
       </SafeAreaView>
     </>
   );
-});
+};
 
 const styles = StyleSheet.create({
   safe: {
@@ -50,6 +49,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: COLOR.Dark3,
     alignItems: 'stretch',
+    height: 44,
   },
 
   icon: {
