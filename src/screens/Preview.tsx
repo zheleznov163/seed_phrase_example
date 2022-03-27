@@ -73,20 +73,23 @@ const styles = StyleSheet.create({
 
   // ------ Text -------
   logo: {
+    fontFamily: 'Circular Std',
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 18,
     lineHeight: 23,
-    /* identical to box height */
     color: COLOR.White,
+
     width: 70,
   },
   title: {
+    fontFamily: 'Circular Std',
     color: COLOR.White,
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 36,
     lineHeight: 46,
+
     marginBottom: 34,
   },
   bold: {

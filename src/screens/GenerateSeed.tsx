@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
   // ------ Text -------
   title: {
     color: COLOR.White,
-    // fontFamily: 'Circular Std',
+    fontFamily: 'Circular Std',
     fontStyle: 'normal',
     fontWeight: '500',
     fontSize: 24,
@@ -190,6 +190,7 @@ const styles = StyleSheet.create({
   },
   caption: {
     color: COLOR.Grey1,
+    fontFamily: 'Circular Std',
     fontStyle: 'normal',
     fontWeight: '400',
     fontSize: 14,

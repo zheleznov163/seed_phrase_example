@@ -68,6 +68,7 @@ const styles = {
       borderColor: COLOR.White,
     },
     text: {
+      fontFamily: 'Circular Std',
       color: COLOR.White,
     },
   }),
@@ -79,6 +80,7 @@ const styles = {
       paddingHorizontal: 0,
     },
     text: {
+      fontFamily: 'Circular Std',
       color: COLOR.White,
     },
   }),
@@ -90,6 +92,7 @@ const styles = {
       justifyContent: 'space-between',
     },
     text: {
+      fontFamily: 'Circular Std',
       color: COLOR.Dark3,
     },
   }),

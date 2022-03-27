@@ -16,6 +16,14 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A438B0432F06DD0B79E56244 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1F5C2026EAA3D36358D631 /* ExpoModulesProvider.swift */; };
 		D5D36086B75980707F7ACC73 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714899A47D14758616FF1AB8 /* ExpoModulesProvider.swift */; };
+		D637BE550CEA4998920EA3F6 /* CircularStd-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1E7A8DA84414D20BE53DA2C /* CircularStd-Black.ttf */; };
+		7C9DA9120FDF42CFA8DAD1A7 /* CircularStd-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2649D2332BC84DC0BC9BBA25 /* CircularStd-BlackItalic.ttf */; };
+		3F94DE4A47E74DDCA2CE2C4B /* CircularStd-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88A58983B1C64B33AD2129D1 /* CircularStd-Bold.ttf */; };
+		B40A632B7F4844B792CB3A50 /* CircularStd-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 327B469D5A8740BF9221B0B8 /* CircularStd-BoldItalic.ttf */; };
+		A2E99CE7DA614452B20B7B1A /* CircularStd-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0DA58F871BD4E2D8EE2331D /* CircularStd-Book.ttf */; };
+		D11C11DFBC3A40E68BCF73D8 /* CircularStd-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 095AE9DD94CD45B2AE470459 /* CircularStd-BookItalic.ttf */; };
+		9908FCF14EE649F6951E0AA4 /* CircularStd-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD4AB2AAEAD4609ACBE16CD /* CircularStd-Medium.ttf */; };
+		9A3D8CA18ACA4C59B95F0F7A /* CircularStd-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7309FACDB2A946A6A661AA7F /* CircularStd-MediumItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,14 @@
 		C0A881CF5CF3F2B244570E2A /* Pods-seed_phrase_example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seed_phrase_example.debug.xcconfig"; path = "Target Support Files/Pods-seed_phrase_example/Pods-seed_phrase_example.debug.xcconfig"; sourceTree = "<group>"; };
 		D00AAFFCFCFDA5787532823F /* Pods-seed_phrase_example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seed_phrase_example.release.xcconfig"; path = "Target Support Files/Pods-seed_phrase_example/Pods-seed_phrase_example.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		A1E7A8DA84414D20BE53DA2C /* CircularStd-Black.ttf */ = {isa = PBXFileReference; name = "CircularStd-Black.ttf"; path = "../src/assets/fonts/CircularStd-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2649D2332BC84DC0BC9BBA25 /* CircularStd-BlackItalic.ttf */ = {isa = PBXFileReference; name = "CircularStd-BlackItalic.ttf"; path = "../src/assets/fonts/CircularStd-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		88A58983B1C64B33AD2129D1 /* CircularStd-Bold.ttf */ = {isa = PBXFileReference; name = "CircularStd-Bold.ttf"; path = "../src/assets/fonts/CircularStd-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		327B469D5A8740BF9221B0B8 /* CircularStd-BoldItalic.ttf */ = {isa = PBXFileReference; name = "CircularStd-BoldItalic.ttf"; path = "../src/assets/fonts/CircularStd-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F0DA58F871BD4E2D8EE2331D /* CircularStd-Book.ttf */ = {isa = PBXFileReference; name = "CircularStd-Book.ttf"; path = "../src/assets/fonts/CircularStd-Book.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		095AE9DD94CD45B2AE470459 /* CircularStd-BookItalic.ttf */ = {isa = PBXFileReference; name = "CircularStd-BookItalic.ttf"; path = "../src/assets/fonts/CircularStd-BookItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7BD4AB2AAEAD4609ACBE16CD /* CircularStd-Medium.ttf */ = {isa = PBXFileReference; name = "CircularStd-Medium.ttf"; path = "../src/assets/fonts/CircularStd-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7309FACDB2A946A6A661AA7F /* CircularStd-MediumItalic.ttf */ = {isa = PBXFileReference; name = "CircularStd-MediumItalic.ttf"; path = "../src/assets/fonts/CircularStd-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +168,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E233CBF5F47BEE60B243DCF8 /* Pods */,
 				75DFFE168CDBA3EFD294F2B4 /* ExpoModulesProviders */,
+				6FDA64D5105F49FC8ADA49BA /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -177,6 +194,22 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		6FDA64D5105F49FC8ADA49BA /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				A1E7A8DA84414D20BE53DA2C /* CircularStd-Black.ttf */,
+				2649D2332BC84DC0BC9BBA25 /* CircularStd-BlackItalic.ttf */,
+				88A58983B1C64B33AD2129D1 /* CircularStd-Bold.ttf */,
+				327B469D5A8740BF9221B0B8 /* CircularStd-BoldItalic.ttf */,
+				F0DA58F871BD4E2D8EE2331D /* CircularStd-Book.ttf */,
+				095AE9DD94CD45B2AE470459 /* CircularStd-BookItalic.ttf */,
+				7BD4AB2AAEAD4609ACBE16CD /* CircularStd-Medium.ttf */,
+				7309FACDB2A946A6A661AA7F /* CircularStd-MediumItalic.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -274,6 +307,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				D637BE550CEA4998920EA3F6 /* CircularStd-Black.ttf in Resources */,
+				7C9DA9120FDF42CFA8DAD1A7 /* CircularStd-BlackItalic.ttf in Resources */,
+				3F94DE4A47E74DDCA2CE2C4B /* CircularStd-Bold.ttf in Resources */,
+				B40A632B7F4844B792CB3A50 /* CircularStd-BoldItalic.ttf in Resources */,
+				A2E99CE7DA614452B20B7B1A /* CircularStd-Book.ttf in Resources */,
+				D11C11DFBC3A40E68BCF73D8 /* CircularStd-BookItalic.ttf in Resources */,
+				9908FCF14EE649F6951E0AA4 /* CircularStd-Medium.ttf in Resources */,
+				9A3D8CA18ACA4C59B95F0F7A /* CircularStd-MediumItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

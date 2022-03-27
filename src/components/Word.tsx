@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     color: 'transparent',
   },
   index: {
+    fontFamily: 'Circular Std',
     color: hexAlpha(COLOR.White, 40),
     fontStyle: 'normal',
     fontWeight: '400',
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
     marginRight: 6,
   },
   text: {
+    fontFamily: 'Circular Std',
     color: COLOR.White,
     fontStyle: 'normal',
     fontWeight: '400',
